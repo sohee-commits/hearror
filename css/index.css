@@ -1,0 +1,598 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: rgb(257, 255, 255);
+  color: rgb(37, 35, 35);
+}
+
+section:not(#intro),
+article {
+  padding: 4rem 0;
+}
+
+#nav.hidden,
+#menu-button.hidden {
+  display: none;
+}
+
+
+/* light theme */
+
+.light-theme {
+  background-color: rgb(257, 255, 255);
+  color: rgb(37, 35, 35);
+  transition: 0.3s;
+}
+
+.light-theme #theme-button:before {
+  content: '🌑';
+}
+
+.light-theme .btn {
+  border: 0.1rem solid rgb(37, 35, 35);
+}
+
+.light-theme a {
+  color: rgb(37, 35, 35);
+}
+
+.light-theme a:hover {
+  text-decoration: 0.1rem underline rgb(37, 35, 35);
+}
+
+.light-theme header {
+  box-shadow: 0 -0.5rem 1rem rgba(37, 35, 35, 0.5);
+}
+
+.light-theme .btn:active {
+  background-color: rgb(37, 35, 35);
+  color: rgb(257, 255, 255);
+}
+
+.light-theme span {
+  color: rgba(37, 35, 35, 0.4);
+}
+
+.light-theme .card {
+  border-color: rgb(37, 35, 35);
+}
+
+.light-theme img {
+  box-shadow: 0 0 0.5rem rgba(37, 35, 35, 0.1);
+}
+
+.light-theme .card:hover {
+  background-color: rgb(37, 35, 35);
+  color: rgb(257, 255, 255);
+  text-decoration: underline rgb(257, 255, 255);
+  border-color: rgb(37, 35, 35);
+}
+
+.light-theme #album-bg {
+  background: url(../imgs/beat.png);
+}
+
+.light-theme hr {
+  background: rgba(37, 35, 35, 0.1);
+}
+
+.light-theme .card:hover hr {
+  background: rgba(257, 255, 255, 0.1);
+}
+
+.light-theme .card:hover span {
+  color: rgba(257, 255, 255, 0.5);
+}
+
+.light-theme footer {
+  background-color: rgb(37, 35, 35);
+  color: rgb(257, 255, 255);
+}
+
+/* dark theme */
+
+.dark-theme {
+  background-color: rgb(37, 35, 35);
+  color: rgb(257, 255, 255);
+  transition: 0.3s;
+}
+
+.dark-theme #theme-button:before {
+  content: '🌕';
+}
+
+.dark-theme .btn {
+  border: 0.1rem solid rgb(257, 255, 255);
+}
+
+.dark-theme a {
+  color: rgb(257, 255, 255);
+}
+
+.dark-theme a:hover {
+  text-decoration: 0.1rem underline rgb(257, 255, 255);
+}
+
+.dark-theme header {
+  box-shadow: 0 -0.5rem 1rem rgba(257, 255, 255, 0.5);
+}
+
+.dark-theme .btn:active {
+  background-color: rgb(257, 255, 255);
+  color: rgb(37, 35, 35);
+}
+
+.dark-theme span {
+  color: rgba(257, 255, 255, 0.4);
+}
+
+.dark-theme .card {
+  border-color: rgb(257, 255, 255);
+}
+
+.dark-theme img {
+  box-shadow: 0 0 0.5rem rgba(257, 255, 255, 0.5)
+}
+
+.dark-theme .card:hover {
+  background-color: rgb(257, 255, 255);
+  color: rgb(37, 35, 35);
+  text-decoration: underline rgb(37, 35, 35);
+  border-color: rgb(257, 255, 255);
+}
+
+.dark-theme #album-bg {
+  background: url(../imgs/beat-light.png);
+  opacity: 0.9;
+}
+
+.dark-theme hr {
+  background: rgba(257, 255, 255, 0.1);
+}
+
+.dark-theme .card:hover hr {
+  background: rgba(37, 35, 35, 0.1);
+}
+
+.dark-theme .card:hover span {
+  color: rgba(37, 35, 35, 0.5);
+}
+
+.dark-theme footer {
+  border-top: 0.1rem solid rgb(257, 255, 255);
+}
+
+/* layout & general rules */
+
+textarea {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  resize: none;
+}
+
+textarea,
+input {
+  border: none !important;
+  font-weight: normal !important;
+  text-transform: none !important;
+  font-size: 1rem;
+  background-color: rgba(257, 255, 255, 0.1);
+  color: rgb(257, 255, 255);
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+p,
+small {
+  margin: 0;
+}
+
+h2 {
+  text-transform: capitalize;
+  padding-bottom: 0.5rem;
+}
+
+h3 {
+  text-transform: capitalize;
+}
+
+/* Customize the label (the container) */
+label {
+  display: block;
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0.25rem;
+  left: 0.25rem;
+  height: 0.9rem;
+  width: 0.9rem;
+  background-color: rgba(257, 255, 255, 0.2);
+  border-radius: 0.2rem;
+}
+
+/* On mouse-over, add a grey background color */
+label:hover input ~ .checkmark {
+  background-color: rgba(257, 255, 255, 0.3);
+}
+
+/* When the checkbox is checked, add a blue background */
+label input:checked ~ .checkmark {
+  background-color: rgba(257, 255, 255, 0.2);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+label input:checked ~ .checkmark::after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+label .checkmark::after {
+  left: 0.25rem;
+  top: 0.08rem;
+  width: 0.2rem;
+  height: 0.4rem;
+  border: solid rgb(257, 255, 255);
+  border-width: 0 0.2rem 0.2rem 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.disabled-checkbox {
+  cursor: not-allowed;
+}
+
+.btn {
+  margin: 0;
+  padding: 1rem 2rem;
+
+  /* font-family: inherit; */
+  text-transform: uppercase;
+  font-weight: bold;
+
+  /* color: inherit; */
+  /* background-color: inherit; */
+
+  border-radius: 1rem;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+
+  padding: 1rem 2rem;
+
+  min-height: 50px;
+}
+
+#nav,
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 3rem;
+
+  text-transform: capitalize;
+}
+
+#logo {
+  text-decoration: none;
+  color: inherit;
+  text-transform: uppercase;
+}
+
+header > a:hover {
+  cursor: default;
+  text-decoration: none !important;
+}
+
+#theme-button {
+  cursor: pointer;
+  border: none;
+  background-color: inherit;
+  color: inherit;
+  font-size: 1rem;
+}
+
+main {
+  padding: 0 6rem;
+}
+
+#intro,
+#album {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+#intro {
+  align-items: center;
+  padding-bottom: 4rem;
+}
+
+#preview {
+  height: 80%;
+}
+
+#preview img {
+  width: 90%;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 1rem;
+}
+
+#descr {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#descr h1 {
+  text-transform: uppercase;
+  font-size: 4rem;
+}
+
+#descr p {
+  line-height: 2rem;
+}
+
+#descr a {
+  text-transform: uppercase;
+}
+
+#descr div {
+  margin-top: 1rem;
+}
+
+#music {
+  line-height: 2rem;
+}
+
+#music p:last-of-type {
+  padding-bottom: 1rem;
+}
+
+#listen {
+  padding: 2rem 0;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 4rem;
+  padding-top: 0.5rem;
+}
+
+.card {
+  border: 0.1rem solid;
+  border-radius: 1rem;
+  padding: 1rem;
+
+  transition: 0.3s;
+}
+
+.card:hover {
+  text-decoration: none !important;
+}
+
+.card:hover h3::after {
+  content: ' 🔗';
+}
+
+.card div {
+  border-radius: inherit;
+  padding-bottom: 1rem;
+}
+
+.card div img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  border-radius: inherit;
+}
+
+#album {
+  /* layout almost same as #intro */
+  align-items: start;
+}
+
+#album h2 {
+  text-transform: uppercase;
+  padding: 0.5rem 0;
+}
+
+#album li {
+  text-transform: capitalize;
+  padding-bottom: 0.5rem;
+}
+
+#album small {
+  opacity: 0.2;
+  font-weight: bold;
+}
+
+#album-bg {
+  display: flex;
+  align-self: stretch;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+  background-position: center !important;
+}
+
+hr {
+  height: 0.1rem;
+  border: none;
+  /* margin-top: 4rem; */
+}
+
+#buy h2 {
+  padding-bottom: 2rem;
+}
+
+#buy .card {
+  line-height: 1.5rem;
+}
+
+#buy .card p,
+#buy .card span {
+  text-transform: uppercase;
+}
+
+#buy .card span {
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+#buy .card p:last-child {
+  padding-top: 0.5rem;
+}
+
+footer section {
+  display: flex;
+  align-items: start;
+  justify-content: space-around;
+  gap: 4rem;
+  padding: 2rem;
+  margin-top: 4rem;
+  text-transform: capitalize;
+}
+
+footer p,
+footer a,
+footer small {
+  color: rgb(257, 255, 255) !important;
+  line-height: 1rem;
+  padding-bottom: 1rem;
+  opacity: 0.5;
+}
+
+footer > div {
+  flex-direction: column;
+  align-items: start;
+  gap: 1rem;
+}
+
+footer nav,
+#links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+#links img {
+  opacity: 0.9;
+  box-shadow: none;
+}
+
+dialog {
+  border: none;
+  border-radius: 1rem;
+  background-color: rgb(37, 35, 35);
+  color: rgb(257, 255, 255);
+}
+
+dialog div {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  opacity: 0.9;
+}
+
+dialog div p {
+  transition: 0.3s;
+}
+
+dialog div p:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+dialog span {
+  color: rgba(257, 255, 255, 0.2) !important;
+  font-size: 1rem;
+  text-transform: none;
+  font-style: italic;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+dialog button {
+  font-size: 1rem;
+}
+
+dialog > p {
+  padding: 1rem 0;
+  width: 100%;
+  line-height: 1.5rem;
+  text-transform: none;
+}
+
+#cookies {
+  position: fixed;
+  bottom: 1rem;
+  margin-left: 1rem;
+  opacity: 0.9;
+  line-height: 1rem;
+}
+
+.dark-theme #cookies {
+  border: 0.1rem solid rgba(257, 255, 255, 0.9);
+}
+
+#configuring-cookies {
+  max-width: 50vw;
+}
+
+#cr {
+  padding: 4rem 0 2rem;
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+}

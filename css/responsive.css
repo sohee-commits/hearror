@@ -1,0 +1,118 @@
+@media(max-width: 900px) {
+  #intro h1 {
+    font-size: 3rem;
+  }
+
+  footer section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  footer nav {
+    grid-row-start: 2;
+  }
+}
+
+@media(max-width: 800px) {
+  #intro {
+    grid-template-columns: 1fr;
+    height: 90vh;
+    background-image: url(../imgs/speaker.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  #preview {
+    display: none;
+  }
+
+  .light-theme #descr {
+    background-color: rgba(257, 255, 255, 0.8);
+  }
+
+  .dark-theme #descr {
+    background-color: rgba(37, 35, 35, 0.8);
+  }
+
+  #album {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  footer {
+    padding: 0 2rem;
+  }
+}
+
+@media(max-width: 620px) {
+  ::-webkit-scrollbar {width: auto; height: 0.5rem;}
+  ::-webkit-scrollbar-track {background-color: transparent;}  
+  ::-webkit-scrollbar-track:hover {background-color: transparent;}
+
+  .dark-theme ::-webkit-scrollbar-thumb {background-color: rgba(257, 255, 255, 0.5);}  
+  .dark-theme ::-webkit-scrollbar-thumb:hover {background-color: rgba(257, 255, 255, 0.8);}
+
+  .light-theme ::-webkit-scrollbar-thumb {background-color: rgba(37, 35, 35, 0.5);}  
+  .light-theme  ::-webkit-scrollbar-thumb:hover {background-color: rgba(37, 35, 35, 0.8);}
+
+  header {
+    flex-direction: column;
+  }
+
+  #nav {
+    flex-direction: column-reverse;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  main {
+    padding: 0 2rem;
+  }
+
+  #descr p {
+    line-height: 3rem;
+  }
+
+  .cards {
+    overflow-x: scroll;
+    padding-bottom: 2rem;
+  }
+
+  .card {
+    min-width: 30vw;
+  }
+
+  footer section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer nav {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media(max-width: 500px) {
+  #intro {
+    padding: 4rem 0;
+    height: 100%;
+  }
+
+  #intro h1 {
+    font-size: 2.5rem;
+  }
+
+  .card {
+    min-width: 40vw;
+  }
+}
+
+@media(max-width: 300px) {
+  footer nav {
+    grid-template-columns: 1fr;
+  }
+}
