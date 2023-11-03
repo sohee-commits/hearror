@@ -1,3 +1,4 @@
+// show cookies alert on load
 window.onload = function () {
   let cookiesDialog = document.querySelector("#cookies");
   let acceptCookies = document.querySelector("#accept-cookies");
@@ -26,11 +27,7 @@ window.onload = function () {
   cookiesDialog.show();
 };
 
-// function closeDialog {
-//   let dialog = document.querySelector('dialog');
-//   dialog.close();
-// } 
-
+// change theme on button
 let page = document.querySelector("#page");
 let themeButton = document.querySelector("#theme-button");
 
@@ -39,21 +36,42 @@ themeButton.addEventListener("click", function () {
   page.classList.toggle("light-theme");
 });
 
-let width = window.innerWidth;
-let nav = document.querySelector("#nav");
+// using menu button to access menu for phone screen sizes
 let menuButton = document.querySelector("#menu-button");
 
-if (width < 600) {
-  nav.classList.add("hidden");
-  menuButton.classList.remove("hidden");
-} else {
-  nav.classList.remove("hidden");
-  menuButton.classList.add("hidden");
-}
+window.addEventListener("resize", function () {
+  let width = window.innerWidth || document.documentElement.clientWidth;
+  let nav = document.querySelector("#nav");
+
+  if (width <= 620) {
+    nav.classList.add("hidden");
+    menuButton.classList.remove("hidden");
+  } else {
+    nav.classList.remove("hidden");
+    menuButton.classList.add("hidden");
+  }
+});
+
+// show button to scroll to the top when scrolled height of the window 
+let goUpBtn = document.querySelector("#go-up");
+let height =
+  window.innerHeight ||
+  document.documentElement.clientHeight ||
+  document.body.clientHeight;
+
+window.addEventListener("scroll", function () {
+  if (window.scrollY >= height) {
+    goUpBtn.classList.remove("hidden");
+  } else {
+    goUpBtn.classList.add("hidden");
+  }
+});
 
 menuButton.addEventListener("click", function () {
   nav.classList.toggle("hidden");
 });
+
+// business form 
 
 document.querySelector("#open-business").addEventListener("click", function () {
   document.querySelector("#business").showModal();
@@ -64,6 +82,8 @@ document
   .addEventListener("click", function () {
     document.querySelector("#business").close();
   });
+
+// support form 
 
 document.querySelector("#open-support").addEventListener("click", function () {
   document.querySelector("#support").showModal();

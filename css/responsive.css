@@ -17,7 +17,7 @@
   #intro {
     grid-template-columns: 1fr;
     height: 90vh;
-    background-image: url(../imgs/speaker.jpg);
+    background-image: url(../imgs/speaker-no-bg.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -25,14 +25,6 @@
 
   #preview {
     display: none;
-  }
-
-  .light-theme #descr {
-    background-color: rgba(257, 255, 255, 0.8);
-  }
-
-  .dark-theme #descr {
-    background-color: rgba(37, 35, 35, 0.8);
   }
 
   #album {
@@ -46,15 +38,34 @@
 }
 
 @media(max-width: 620px) {
-  ::-webkit-scrollbar {width: auto; height: 0.5rem;}
-  ::-webkit-scrollbar-track {background-color: transparent;}  
-  ::-webkit-scrollbar-track:hover {background-color: transparent;}
+  ::-webkit-scrollbar {
+    width: auto;
+    height: 0.5rem;
+  }
 
-  .dark-theme ::-webkit-scrollbar-thumb {background-color: rgba(257, 255, 255, 0.5);}  
-  .dark-theme ::-webkit-scrollbar-thumb:hover {background-color: rgba(257, 255, 255, 0.8);}
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
 
-  .light-theme ::-webkit-scrollbar-thumb {background-color: rgba(37, 35, 35, 0.5);}  
-  .light-theme  ::-webkit-scrollbar-thumb:hover {background-color: rgba(37, 35, 35, 0.8);}
+  ::-webkit-scrollbar-track:hover {
+    background-color: transparent;
+  }
+
+  .dark-theme ::-webkit-scrollbar-thumb {
+    background-color: rgba(257, 255, 255, 0.5);
+  }
+
+  .dark-theme ::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(257, 255, 255, 0.8);
+  }
+
+  .light-theme ::-webkit-scrollbar-thumb {
+    background-color: rgba(37, 35, 35, 0.5);
+  }
+
+  .light-theme ::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(37, 35, 35, 0.8);
+  }
 
   header {
     flex-direction: column;
@@ -109,10 +120,64 @@
   .card {
     min-width: 40vw;
   }
+
+  #cookies div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
 }
 
 @media(max-width: 300px) {
+  #album {
+    grid-template-rows: repeat(2, auto);
+  }
+
+  #album-bg {
+    height: 10vh;
+  }
+
   footer nav {
     grid-template-columns: 1fr;
   }
+}
+
+@media(max-width: 250px) {
+  body p,
+  nav a,
+  dialog p,
+  label,
+  .btn {
+    font-size: 0.85rem !important;
+    line-height: 1.5rem !important;
+  }
+
+  .btn {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+  }
+
+  body h3 {
+    font-size: 0.9rem !important;
+  }
+  
+  body h2 {
+    font-size: 0.95rem !important;
+  }
+
+  body h1 {
+    font-size: 1rem !important;
+  }
+
+  section:not(#intro),
+  article {
+    padding: 2rem 0;
+  }
+
+  #nav,
+  nav,
+  footer nav {
+    gap: 0.5rem;
+  } 
+
 }
