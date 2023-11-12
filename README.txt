@@ -1,4 +1,4 @@
-♡ changes theme to light and dark;
+♡ dark/light theme button;
 ♡ used flex & grid;
 ♡ cookies preferences;
 ♡ custom checkboxes;
