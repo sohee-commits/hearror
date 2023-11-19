@@ -1,3 +1,6 @@
+// remove that when done with development 
+document.querySelector("#cookies").style.display = "none";
+
 // show cookies alert on load
 window.onload = function () {
   let cookiesDialog = document.querySelector("#cookies");
@@ -41,18 +44,18 @@ let menuButton = document.querySelector("#menu-button");
 
 window.addEventListener("resize", function () {
   let width = window.innerWidth || document.documentElement.clientWidth;
-  let nav = document.querySelector("#nav");
+  let menu = document.querySelector("#menu");
 
   if (width <= 620) {
-    nav.classList.add("hidden");
+    menu.classList.add("hidden");
     menuButton.classList.remove("hidden");
   } else {
-    nav.classList.remove("hidden");
+    menu.classList.remove("hidden");
     menuButton.classList.add("hidden");
   }
 });
 
-// show button to scroll to the top when scrolled height of the window 
+// show button to scroll to the top when scrolled height of the window
 let goUpBtn = document.querySelector("#go-up");
 let height =
   window.innerHeight ||
@@ -68,10 +71,10 @@ window.addEventListener("scroll", function () {
 });
 
 menuButton.addEventListener("click", function () {
-  nav.classList.toggle("hidden");
+  menu.classList.toggle("hidden");
 });
 
-// business form 
+// business form
 
 document.querySelector("#open-business").addEventListener("click", function () {
   document.querySelector("#business").showModal();
@@ -83,7 +86,7 @@ document
     document.querySelector("#business").close();
   });
 
-// support form 
+// support form
 
 document.querySelector("#open-support").addEventListener("click", function () {
   document.querySelector("#support").showModal();
