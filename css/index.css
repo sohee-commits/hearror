@@ -15,6 +15,10 @@ article {
   padding: 4rem 6rem;
 }
 
+.safeScroll {
+  height: 4rem;
+}
+
 #menu.hidden,
 #menu-button.hidden,
 #go-up.hidden {
@@ -298,6 +302,7 @@ label .checkmark::after {
 }
 
 #go-up {
+  text-decoration: none;
   position: fixed;
   bottom: 1rem;
   right: 1rem;
