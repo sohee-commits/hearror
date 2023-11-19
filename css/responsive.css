@@ -1,4 +1,4 @@
-@media(max-width: 900px) {
+@media (max-width: 900px) {
   #intro h1 {
     font-size: 3rem;
   }
@@ -13,18 +13,29 @@
   }
 }
 
-@media(max-width: 800px) {
+@media (max-width: 800px) {
   #intro {
     grid-template-columns: 1fr;
     height: 90vh;
-    background-image: url(../imgs/speaker-no-bg.png);
-    background-size: contain;
+    color: rgb(257, 255, 255);
+    background-image: url(../assets/cover-dark.jpg);
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    padding: 0 6rem;
   }
 
   #preview {
     display: none;
+  }
+
+  #descr p {
+    text-shadow: 0 0 10px black;
+  }
+
+  #descr a.btn {
+    color: rgb(257, 255, 255);
+    border-color: rgb(257, 255, 255);
   }
 
   #album {
@@ -37,7 +48,7 @@
   }
 }
 
-@media(max-width: 620px) {
+@media (max-width: 620px) {
   ::-webkit-scrollbar {
     width: auto;
     height: 0.5rem;
@@ -71,7 +82,7 @@
     flex-direction: column;
   }
 
-  #nav {
+  #menu {
     flex-direction: column-reverse;
   }
 
@@ -79,12 +90,8 @@
     flex-direction: column;
   }
 
-  main {
-    padding: 0 2rem;
-  }
-
   #descr p {
-    line-height: 3rem;
+    line-height: 2rem;
   }
 
   .cards {
@@ -107,28 +114,32 @@
   }
 }
 
-@media(max-width: 500px) {
+@media (max-width: 500px) {
   #intro {
-    padding: 4rem 0;
-    height: 100%;
+    padding: 2rem;
   }
 
-  #intro h1 {
-    font-size: 2.5rem;
+  main section:not(#intro),
+  main article {
+    padding: 4rem 2rem;
+  }
+
+  #descr p {
+    line-height: 1.5rem;
   }
 
   .card {
     min-width: 40vw;
   }
-
-  #cookies div {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
 }
 
-@media(max-width: 300px) {
+@media (max-width: 300px) {
+  #cookies div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
   #album {
     grid-template-rows: repeat(2, auto);
   }
@@ -142,7 +153,7 @@
   }
 }
 
-@media(max-width: 250px) {
+@media (max-width: 250px) {
   body p,
   nav a,
   dialog p,
@@ -154,13 +165,13 @@
 
   .btn {
     padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
+    border-radius: 0.8em;
   }
 
   body h3 {
     font-size: 0.9rem !important;
   }
-  
+
   body h2 {
     font-size: 0.95rem !important;
   }
@@ -174,10 +185,14 @@
     padding: 2rem 0;
   }
 
-  #nav,
+  #menu-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #menu,
   nav,
   footer nav {
     gap: 0.5rem;
-  } 
-
+  }
 }
