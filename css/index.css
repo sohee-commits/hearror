@@ -46,6 +46,8 @@ article {
 }
 
 .light-theme header {
+  background-color: rgb(257, 255, 255);
+  color: rgb(37, 35, 35);
   box-shadow: 0 -0.5rem 1rem rgba(37, 35, 35, 0.5);
 }
 
@@ -124,6 +126,8 @@ article {
 }
 
 .dark-theme header {
+  background-color: rgb(37, 35, 35);
+  color: rgb(257, 255, 255);
   box-shadow: 0 -0.5rem 1rem rgba(257, 255, 255, 0.5);
 }
 
@@ -333,10 +337,9 @@ header {
   padding: 1rem 2rem;
   min-height: 50px;
 
+  transition: 0.3s;
   position: sticky;
   top: 0;
-  background-color: rgb(257, 255, 255);
-  color: rgb(37, 35, 35);
   z-index: 1;
 }
 
