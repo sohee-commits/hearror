@@ -1,0 +1,73 @@
+.light-theme {
+  background-color: rgb(257, 255, 255);
+  color: rgb(37, 35, 35);
+  transition: 0.3s;
+}
+
+.light-theme #theme-button:before {
+  content: "🌑";
+}
+
+.light-theme .btn {
+  border: 0.1rem solid rgb(37, 35, 35);
+}
+
+.light-theme a {
+  color: rgb(37, 35, 35);
+}
+
+.light-theme a:hover {
+  text-decoration: 0.1rem underline rgb(37, 35, 35);
+}
+
+.light-theme header {
+  background-color: rgb(257, 255, 255);
+  color: rgb(37, 35, 35);
+  box-shadow: 0 -0.5rem 1rem rgba(37, 35, 35, 0.5);
+}
+
+.light-theme .btn:active {
+  background-color: rgb(37, 35, 35);
+  color: rgb(257, 255, 255);
+}
+
+.light-theme .card {
+  border-color: rgb(37, 35, 35);
+}
+
+.light-theme img {
+  box-shadow: 0 0 0.5rem rgba(37, 35, 35, 0.1);
+}
+
+.light-theme .card:hover {
+  background-color: rgb(37, 35, 35);
+  color: rgb(257, 255, 255);
+  text-decoration: underline rgb(257, 255, 255);
+  border-color: rgb(37, 35, 35);
+}
+
+.light-theme #album-bg {
+  background: url(../assets/beat.png);
+}
+
+.light-theme hr {
+  background: rgba(37, 35, 35, 0.1);
+}
+
+.light-theme .card:hover hr {
+  background: rgba(257, 255, 255, 0.1);
+}
+
+.light-theme .card:hover span {
+  color: rgba(257, 255, 255, 0.5);
+}
+
+.light-theme #go-up {
+  color: rgb(257, 255, 255);
+  background-color: rgb(37, 35, 35);
+}
+
+.light-theme footer {
+  background-color: rgb(37, 35, 35);
+  color: rgb(257, 255, 255);
+}
