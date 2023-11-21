@@ -4,9 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HEARROR MUSIC</title>
-    <link rel="shortcut icon" href="./assets/cover.jpg" type="image/x-icon" />
+    <link rel="shortcut icon" href="./assets/cover-circled.png" type="image/x-icon" />
     <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/responsive.css" />
+    <link rel="stylesheet" href="./css/light-theme.css">
+    <link rel="stylesheet" href="./css/dark-theme.css">
+
+    
+    <script src="./js/script.js" defer></script>
+    <script src="./js/cookies.js" defer></script>
+    <script src="./js/forms.js" defer></script>
   </head>
 
   <body id="page" class="light-theme">
@@ -17,10 +25,10 @@
       </div>
       <div id="menu">
         <nav>
-          <a href="#music-start">music</a>
-          <a href="#listen-start">listen</a>
-          <a href="#album-start">album</a>
-          <a href="#buy-start">buy</a>
+          <a href="#music-start" class="menu-item">music</a>
+          <a href="#listen-start" class="menu-item">listen</a>
+          <a href="#album-start" class="menu-item">album</a>
+          <a href="#buy-start" class="menu-item">buy</a>
         </nav>
         <button id="theme-button"></button>
       </div>
@@ -28,11 +36,6 @@
 
     <main>
       <section id="intro">
-        <div id="preview">
-          <img
-            src="./assets/cover.jpg"
-            alt="[picture by dream.ai] album cover" />
-        </div>
         <div id="descr">
           <h1>believe <br />missin'</h1>
           <p>
@@ -42,7 +45,7 @@
             longing, waiting, and the belief in the unseen, painting a vivid
             picture of emotional depth and personal growth.
           </p>
-          <a href="#listen" class="btn">listen</a>
+          <a href="#listen-start" class="btn">listen</a>
         </div>
       </section>
 
@@ -183,8 +186,8 @@
           <a href="#listen">where to listen</a>
           <a href="#album">album tracklist</a>
           <a href="#buy">buy album</a>
-          <a href="#">user license</a>
-          <a href="#">data processing</a>
+          <a href="./pages/termsOfUse.html">terms of use</a>
+          <a href="./pages/dataProcessing.html">data processing</a>
         </nav>
 
         <div id="links">
@@ -317,7 +320,5 @@
     </dialog>
 
     <a href="#" id="go-up" class="hidden">↑</a>
-
-    <script src="./js/script.js"></script>
   </body>
 </html>
