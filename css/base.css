@@ -177,6 +177,7 @@ header {
 
   transition: 0.3s;
   position: sticky;
+  box-sizing: border-box;
   top: 0;
   z-index: 1;
 }
@@ -266,7 +267,7 @@ dialog {
   border: none;
   border-radius: 1rem;
   background-color: rgb(37, 35, 35);
-  color: rgb(257, 255, 255);
+  color: rgb(257, 255, 255) !important;
 }
 
 dialog div {
