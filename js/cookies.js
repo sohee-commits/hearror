@@ -1,5 +1,5 @@
 // remove that when done with development
-document.querySelector(`#cookies`).style.display = `none`;
+// document.querySelector(`#cookies`).style.display = `none`;
 
 // show cookies alert on load
 window.onload = function () {
