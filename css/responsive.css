@@ -24,7 +24,7 @@
   }
 }
 
-@media (max-width: 620px) {
+@media (max-width: 670px) {
   #menu nav a:last-child {
     padding-bottom: 1rem;
   }
