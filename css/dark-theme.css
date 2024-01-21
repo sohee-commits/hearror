@@ -1,6 +1,6 @@
 .dark-theme {
-  background-color: rgb(37, 35, 35);
-  color: rgb(257, 255, 255);
+  background-color: var(--black);
+  color: var(--white);
   transition: 0.3s;
 }
 
@@ -9,30 +9,30 @@
 }
 
 .dark-theme .btn {
-  border: 0.1rem solid rgb(257, 255, 255);
+  border: 0.1rem solid var(--white);
 }
 
 .dark-theme a {
-  color: rgb(257, 255, 255);
+  color: var(--white);
 }
 
 .dark-theme a:hover {
-  text-decoration: 0.1rem underline rgb(257, 255, 255);
+  text-decoration: 0.1rem underline var(--white);
 }
 
 .dark-theme header {
-  background-color: rgb(37, 35, 35);
-  color: rgb(257, 255, 255);
+  background-color: var(--black);
+  color: var(--white);
   box-shadow: 0 -0.5rem 1rem rgba(257, 255, 255, 0.5);
 }
 
 .dark-theme .btn:active {
-  background-color: rgb(257, 255, 255);
-  color: rgb(37, 35, 35);
+  background-color: var(--white);
+  color: var(--black);
 }
 
 .dark-theme .card {
-  border-color: rgb(257, 255, 255);
+  border-color: var(--white);
 }
 
 .dark-theme img {
@@ -40,10 +40,10 @@
 }
 
 .dark-theme .card:hover {
-  background-color: rgb(257, 255, 255);
-  color: rgb(37, 35, 35);
-  text-decoration: underline rgb(37, 35, 35);
-  border-color: rgb(257, 255, 255);
+  background-color: var(--white);
+  color: var(--black);
+  text-decoration: underline var(--black);
+  border-color: var(--white);
 }
 
 .dark-theme #album-bg {
@@ -64,14 +64,14 @@
 }
 
 .dark-theme #cookies {
-  box-shadow: 0 0 0.2rem rgb(257, 255, 255) inset;
+  box-shadow: 0 0 0.2rem var(--white) inset;
 }
 
 .dark-theme #go-up {
-  color: rgb(37, 35, 35);
-  background-color: rgb(257, 255, 255);
+  color: var(--black);
+  background-color: var(--white);
 }
 
 .dark-theme footer {
-  border-top: 0.1rem solid rgb(257, 255, 255);
+  border-top: 0.1rem solid var(--white);
 }
