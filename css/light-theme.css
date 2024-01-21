@@ -1,6 +1,6 @@
 .light-theme {
-  background-color: rgb(257, 255, 255);
-  color: rgb(37, 35, 35);
+  background-color: var(--white);
+  color: var(--black);
   transition: 0.3s;
 }
 
@@ -9,30 +9,30 @@
 }
 
 .light-theme .btn {
-  border: 0.1rem solid rgb(37, 35, 35);
+  border: 0.1rem solid var(--black);
 }
 
 .light-theme a {
-  color: rgb(37, 35, 35);
+  color: var(--black);
 }
 
 .light-theme a:hover {
-  text-decoration: 0.1rem underline rgb(37, 35, 35);
+  text-decoration: 0.1rem underline var(--black);
 }
 
 .light-theme header {
-  background-color: rgb(257, 255, 255);
-  color: rgb(37, 35, 35);
+  background-color: var(--white);
+  color: var(--black);
   box-shadow: 0 -0.5rem 1rem rgba(37, 35, 35, 0.5);
 }
 
 .light-theme .btn:active {
-  background-color: rgb(37, 35, 35);
-  color: rgb(257, 255, 255);
+  background-color: var(--black);
+  color: var(--white);
 }
 
 .light-theme .card {
-  border-color: rgb(37, 35, 35);
+  border-color: var(--black);
 }
 
 .light-theme img {
@@ -40,10 +40,10 @@
 }
 
 .light-theme .card:hover {
-  background-color: rgb(37, 35, 35);
-  color: rgb(257, 255, 255);
-  text-decoration: underline rgb(257, 255, 255);
-  border-color: rgb(37, 35, 35);
+  background-color: var(--black);
+  color: var(--white);
+  text-decoration: underline var(--white);
+  border-color: var(--black);
 }
 
 .light-theme #album-bg {
@@ -63,11 +63,11 @@
 }
 
 .light-theme #go-up {
-  color: rgb(257, 255, 255);
-  background-color: rgb(37, 35, 35);
+  color: var(--white);
+  background-color: var(--black);
 }
 
 .light-theme footer {
-  background-color: rgb(37, 35, 35);
-  color: rgb(257, 255, 255);
+  background-color: var(--black);
+  color: var(--white);
 }
