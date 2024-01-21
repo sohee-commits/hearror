@@ -24,7 +24,7 @@ article {
   align-items: center;
   justify-content: center;
   height: 90vh;
-  color: rgb(257, 255, 255);
+  color: var(--white);
   background-image: url(../assets/cover-dark.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -45,8 +45,8 @@ article {
 }
 
 #descr a.btn {
-  color: rgb(257, 255, 255);
-  border-color: rgb(257, 255, 255);
+  color: var(--white);
+  border-color: var(--white);
 }
 
 #descr h1 {
