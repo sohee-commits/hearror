@@ -3,11 +3,13 @@
 
 // show cookies alert on load
 window.onload = function () {
+  // dialogs
   let cookiesDialog = document.querySelector(`#cookies`);
+  let configCookiesDialog = document.querySelector(`#configuring-cookies`);
+  // dialogs buttons
   let acceptCookies = document.querySelector(`#accept-cookies`);
   let declineCookies = document.querySelector(`#decline-cookies`);
   let configCookies = document.querySelector(`#configure-cookies`);
-  let configCookiesDialog = document.querySelector(`#configuring-cookies`);
   let closeCookiesPrefs = document.querySelector(`#closeCookiesPrefs`);
 
   acceptCookies.addEventListener(`click`, function () {
