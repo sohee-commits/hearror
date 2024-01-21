@@ -4,13 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HEARROR - Terms of Use</title>
-    <link rel="shortcut icon" href="../assets/cover-circled.png" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="../assets/cover-circled.png"
+      type="image/x-icon" />
+    <!-- style links -->
     <link rel="stylesheet" href="../css/termsAndData.css" />
     <link rel="stylesheet" href="../css/base.css" />
     <link rel="stylesheet" href="../css/responsive.css" />
     <link rel="stylesheet" href="../css/light-theme.css" />
     <link rel="stylesheet" href="../css/dark-theme.css" />
-
+    <!-- script links -->
     <script src="../js/script.js" defer></script>
     <script src="../js/cookies.js" defer></script>
     <script src="../js/forms.js" defer></script>
@@ -102,6 +106,7 @@
 
     <footer>
       <section>
+        <!-- header nav repeat + two working inner pages links -->
         <nav>
           <a href="#music">our music</a>
           <a href="#listen">where to listen</a>
@@ -110,7 +115,7 @@
           <a href="#page">terms of use</a>
           <a href="./dataProcessing.html">data processing</a>
         </nav>
-
+        <!-- socials links -->
         <div id="links">
           <a href="https://www.facebook.com" target="_blank"
             ><img src="../assets/facebook.png" alt="facebook link" width="30px"
@@ -140,16 +145,17 @@
             ><img src="../assets/deezer.png" alt="instagram link" width="30px"
           /></a>
         </div>
-
+        <!-- support and contact -->
         <button id="open-support" class="btn">support</button>
+        <!-- support dialog -->
         <dialog id="support">
           <div>
             <h3>support <br /><span>HEARRORSupport@example.com</span></h3>
             <p id="close-support">x</p>
           </div>
-          <form>
+          <form id="support-form">
             <input
-              type="text"
+              type="email"
               name="support-email"
               class="btn"
               placeholder="Enter e-mail *"
@@ -164,8 +170,8 @@
             <button type="submit" class="btn">submit</button>
           </form>
         </dialog>
-
         <button id="open-business" class="btn">business contact</button>
+        <!-- contact dialog -->
         <dialog id="business">
           <div>
             <h3>
@@ -173,9 +179,9 @@
             </h3>
             <p id="close-business">x</p>
           </div>
-          <form>
+          <form id="business-form">
             <input
-              type="text"
+              type="email"
               name="business-email"
               class="btn"
               placeholder="Enter e-mail *"
@@ -192,12 +198,12 @@
           <p>We appreciate your interest in our company.</p>
         </dialog>
       </section>
-
+      <!-- link to my github -->
       <div id="cr">
-        <a href="https://github.com/sohee-commits">─── ⋆⋅소희⋅⋆ ──</a>
+        <a href="https://github.com/sohee-commits">dev: 소희</a>
       </div>
     </footer>
-
+    <!-- cookies dialog -->
     <dialog id="cookies">
       <h1>🍪</h1>
       <h2>we use cookies</h2>
@@ -208,7 +214,7 @@
       </div>
       <button class="btn" id="configure-cookies">configure preferences</button>
     </dialog>
-
+    <!-- configuring cookies dialog -->
     <dialog id="configuring-cookies">
       <h2>configuring cookies</h2>
       <h3>neccessary</h3>
@@ -248,7 +254,7 @@
       <br />
       <button class="btn" id="closeCookiesPrefs">save</button>
     </dialog>
-
+    <!-- link to the top of the page -->
     <a href="#" id="go-up" class="hidden">↑</a>
   </body>
 </html>
