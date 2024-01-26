@@ -7,6 +7,10 @@ html {
   scroll-behavior: smooth;
 }
 
+* {
+  transition: 0.5s;
+}
+
 body {
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -66,76 +70,7 @@ h3 {
   text-transform: capitalize;
 }
 
-/* Customize the label (the container) */
-label {
-  display: block;
-  position: relative;
-  padding-left: 1.5rem;
-  margin-bottom: 0.5rem;
-  cursor: pointer;
-  font-size: 1rem;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-/* Hide the browser's default checkbox */
-label input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-
-/* Create a custom checkbox */
-.checkmark {
-  position: absolute;
-  top: 0.25rem;
-  left: 0.25rem;
-  height: 0.9rem;
-  width: 0.9rem;
-  background-color: rgba(257, 255, 255, 0.2);
-  border-radius: 0.2rem;
-}
-
-/* On mouse-over, add a grey background color */
-label:hover input ~ .checkmark {
-  background-color: rgba(257, 255, 255, 0.3);
-}
-
-/* When the checkbox is checked, add a blue background */
-label input:checked ~ .checkmark {
-  background-color: rgba(257, 255, 255, 0.2);
-}
-
-/* Create the checkmark/indicator (hidden when not checked) */
-.checkmark::after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-/* Show the checkmark when checked */
-label input:checked ~ .checkmark::after {
-  display: block;
-}
-
-/* Style the checkmark/indicator */
-label .checkmark::after {
-  left: 0.25rem;
-  top: 0.08rem;
-  width: 0.2rem;
-  height: 0.4rem;
-  border: solid var(--white);
-  border-width: 0 0.2rem 0.2rem 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-.disabled-checkbox {
+input[type=checkbox][disabled] {
   cursor: not-allowed;
 }
 
@@ -151,25 +86,15 @@ label .checkmark::after {
   height: 3rem;
   text-align: center;
   border-radius: 100%;
-  transition: 0.3s;
 }
 
 .btn {
   margin: 0;
   padding: 1rem 2rem;
-
-  /* font-family: inherit; */
   text-transform: uppercase;
   font-weight: bold;
-
-  /* color: inherit; */
-  /* background-color: inherit; */
-
   border-radius: 1rem;
-
   cursor: pointer;
-
-  transition: 0.3s;
 }
 
 header {
@@ -180,7 +105,6 @@ header {
   padding: 1rem 2rem;
   min-height: 50px;
 
-  transition: 0.3s;
   position: sticky;
   box-sizing: border-box;
   top: 0;
@@ -277,13 +201,9 @@ dialog {
 
 dialog div {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   padding-bottom: 1rem;
   opacity: 0.9;
-}
-
-dialog div p {
-  transition: 0.3s;
 }
 
 dialog div p:hover {
@@ -321,11 +241,14 @@ dialog > p {
   margin: 0 1rem 0;
   opacity: 0.9;
   line-height: 1rem;
-  transition: 0.3s;
 }
 
-#configuring-cookies {
+#cookies-config {
   max-width: 50vw;
+}
+
+#cookies-config div {
+  display: grid;
 }
 
 #cr {
