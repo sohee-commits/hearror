@@ -1,33 +1,36 @@
-// remove that when done with development
-// document.querySelector(`#cookies`).style.display = `none`;
-
-// show cookies alert on load
 window.onload = function () {
-  // dialogs
-  let cookiesDialog = document.querySelector(`#cookies`);
-  let configCookiesDialog = document.querySelector(`#configuring-cookies`);
-  // dialogs buttons
-  let acceptCookies = document.querySelector(`#accept-cookies`);
-  let declineCookies = document.querySelector(`#decline-cookies`);
-  let configCookies = document.querySelector(`#configure-cookies`);
-  let closeCookiesPrefs = document.querySelector(`#closeCookiesPrefs`);
+  // show cookies alert on load
+  let cookies = document.querySelector(`#cookies`);
+  cookies.show();
 
-  acceptCookies.addEventListener(`click`, function () {
-    cookiesDialog.close();
+  // open/close dialog buttons
+  let closeNodeList = document.querySelectorAll(`.close`);
+  let openNodeList = document.querySelectorAll(`.open`);
+
+  // close dialog
+  closeNodeList.forEach((close) => {
+    close.addEventListener(`click`, (e) => {
+      // prevent from bubbling up to parent elements
+      e.stopPropagation();
+      let dialogId = close.getAttribute(`data-dialog`);
+      let dialog = document.querySelector(`#${dialogId}`);
+      dialog.remove();
+
+      // if dialog related to cookies
+      if (dialogId === `cookies-config`) {
+        cookies.close();
+      }
+    });
   });
 
-  declineCookies.addEventListener(`click`, function () {
-    cookiesDialog.close();
+  // open dialog
+  openNodeList.forEach((open) => {
+    open.addEventListener(`click`, (e) => {
+      // prevent from bubbling up to parent elements [2] lol
+      e.stopPropagation();
+      let dialogId = open.getAttribute(`data-dialog`);
+      let dialog = document.querySelector(`#${dialogId}`);
+      dialog.showModal();
+    });
   });
-
-  configCookies.addEventListener(`click`, function () {
-    configCookiesDialog.showModal();
-  });
-
-  closeCookiesPrefs.addEventListener(`click`, function () {
-    configCookiesDialog.close();
-    cookiesDialog.close();
-  });
-
-  cookiesDialog.show();
 };
