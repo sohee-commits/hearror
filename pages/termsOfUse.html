@@ -151,7 +151,7 @@
         <dialog id="support">
           <div>
             <h3>support <br /><span>HEARRORSupport@example.com</span></h3>
-            <p id="close-support">x</p>
+            <p class="close" data-dialog="support">x</p>
           </div>
           <form id="support-form">
             <input
@@ -167,7 +167,7 @@
               placeholder="Describe your problem *"
               class="btn"
               required></textarea>
-            <button type="submit" class="btn">submit</button>
+            <button type="submit" class="btn close" data-dialog="support">submit</button>
           </form>
         </dialog>
         <button id="open-business" class="btn">business contact</button>
@@ -177,7 +177,7 @@
             <h3>
               business contact <br /><span>HEARRORBusiness@example.com</span>
             </h3>
-            <p id="close-business">x</p>
+            <p class="close" data-dialog="business">x</p>
           </div>
           <form id="business-form">
             <input
@@ -193,7 +193,7 @@
               placeholder="What is your interest *"
               class="btn"
               required></textarea>
-            <button type="submit" class="btn">submit</button>
+            <button type="submit" class="btn close" data-dialog="business">submit</button>
           </form>
           <p>We appreciate your interest in our company.</p>
         </dialog>
@@ -205,54 +205,50 @@
     </footer>
     <!-- cookies dialog -->
     <dialog id="cookies">
-      <h1>🍪</h1>
+      <h1>&#127850;</h1>
       <h2>we use cookies</h2>
-      <p>Just to make site work right</p>
+      <p>Just to make our site work right</p>
       <div>
-        <button class="btn" id="accept-cookies">accept</button>
-        <button class="btn" id="decline-cookies">decline</button>
+        <button class="btn close" data-dialog="cookies">accept</button>
+        <button class="btn close" data-dialog="cookies">neccessary only</button>
       </div>
-      <button class="btn" id="configure-cookies">configure preferences</button>
+      <button class="btn open" data-dialog="cookies-config">configure preferences</button>
     </dialog>
     <!-- configuring cookies dialog -->
-    <dialog id="configuring-cookies">
+    <dialog id="cookies-config">
       <h2>configuring cookies</h2>
       <h3>neccessary</h3>
 
-      <label for="strictCookies" class="disabled-checkbox">
+      <label for="cookies-strict">
+        <input type="checkbox" id="cookies-strict" checked disabled />
         Strictly necessary cookies — These cookies are essential for you to
         browse the website and use its features, such as accessing secure areas
         of the site.
-        <input type="checkbox" id="strictCookies" checked disabled />
-        <span class="checkmark"></span>
       </label>
 
       <h3>preffered</h3>
 
-      <label for="statCookies"
-        >Statistics cookies — Also known as “performance cookies,” these cookies
+      <label for="cookies-stat">
+        <input type="checkbox" id="cookies-stat" />
+        Statistics cookies — Also known as “performance cookies,” these cookies
         collect information about how you use a website.
-        <input type="checkbox" id="statCookies" />
-        <span class="checkmark"></span>
       </label>
 
-      <label for="prefCookies"
-        >Preferences cookies — Also known as “functionality cookies,” these
+      <label for="cookies-pref">
+        <input type="checkbox" id="cookies-pref" />
+        Preferences cookies — Also known as “functionality cookies,” these
         cookies allow a website to remember choices you have made in the past.
-        <input type="checkbox" id="prefCookies" />
-        <span class="checkmark"></span>
       </label>
 
-      <label for="marketCookies"
-        >Marketing cookies — These cookies track your online activity to help
+      <label for="cookies-market">
+        <input type="checkbox" id="cookies-market" />
+        Marketing cookies — These cookies track your online activity to help
         advertisers deliver more relevant advertising or to limit how many times
         you see an ad.
-        <input type="checkbox" id="marketCookies" />
-        <span class="checkmark"></span>
       </label>
 
       <br />
-      <button class="btn" id="closeCookiesPrefs">save</button>
+      <button class="btn close" data-dialog="cookies-config">save</button>
     </dialog>
     <!-- link to the top of the page -->
     <a href="#" id="go-up" class="hidden">↑</a>
